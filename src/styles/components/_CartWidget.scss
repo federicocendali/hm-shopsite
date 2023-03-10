@@ -1,0 +1,10 @@
+.cart-widget {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.1s;
+
+    &:hover {
+        scale: 1.1;
+    }
+}
