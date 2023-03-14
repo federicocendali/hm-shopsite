@@ -1,13 +1,33 @@
-import { Button } from 'react-bootstrap'
+import { useEffect, useState } from "react";
+import { pedirDatos } from '../helpers/pedirDatos';
+import { ItemList } from "./ItemList";
 
-export const ItemListContainer = ( {greeting} ) => {
+export const ItemListContainer = () => {
+
+    const [productos, setProductos] = useState([])
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        setLoading(true)
+        pedirDatos()
+            .then((res) => {
+                setProductos(res)
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+            .finally(() => {
+                setLoading(false)
+            })
+    }, [])
+
     return (
         <div className="list-container">
-            <h2 className="list-container__title">ItemListContainer</h2>
-            <hr/>
-            <p>{greeting}</p>
-            <Button variant='secondary' size='sm'>Ver Talles</Button>
-            <Button variant='primary'>Agregar al carrito</Button>
+            {
+                loading
+                    ? <h2>Cargando...</h2>
+                    : <ItemList items={productos}/>
+            }
         </div>
     )
 }
