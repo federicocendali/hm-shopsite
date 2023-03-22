@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ItemCount } from './ItemCount';
 
 export const ItemDetail = ({item}) => {
@@ -26,6 +27,9 @@ export const ItemDetail = ({item}) => {
                 setCantidad={setCantidad}
                 agregar={handleAgregar}
             />
+            <div>
+                <Link to="/">Volver</Link>
+            </div>
         </div>
     )
 }
