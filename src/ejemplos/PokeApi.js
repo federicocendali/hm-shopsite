@@ -4,7 +4,6 @@ export const PokeApi = () => {
 
     const [pokemon, setPokemon] = useState(null)
     const [id, setId] = useState(1)
-    console.log(id)
 
     useEffect(() => {
         fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)

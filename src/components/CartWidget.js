@@ -1,4 +1,4 @@
-import { BsFillBagFill } from "react-icons/bs";
+import { BsFillBagFill } from 'react-icons/bs';
 
 export const CartWidget = () => {
     return (
