@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 export const Item = ( {item} ) => {
     return (
         <div className="col-3 m-2">
-            <h2>{item.name}</h2>
+            <Link to={`/detail/${item.id}`}><h2>{item.name}</h2></Link>
             <img src={item.img} alt={item.name}/>
             <p>{item.description}</p>
             <p>Precio: ${item.price}</p>

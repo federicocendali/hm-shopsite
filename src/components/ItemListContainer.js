@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { pedirDatos } from '../helpers/pedirDatos';
 import { ItemList } from './ItemList';
-import { useParams } from 'react-router-dom';
 
 export const ItemListContainer = () => {
 
@@ -9,7 +9,6 @@ export const ItemListContainer = () => {
     const [loading, setLoading] = useState(true)
 
     const { categoryId } = useParams()
-    console.log(categoryId)
 
     useEffect(() => {
         setLoading(true)

@@ -19,6 +19,7 @@ export const ItemDetail = ({item}) => {
             <hr/>
             <img src={item.img} alt={item.name}/>
             <p>{item.description}</p>
+            <p><small>Categoría: {item.category}</small></p>
             <p>Precio: ${item.price}</p>
 
             <ItemCount
