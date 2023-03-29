@@ -12,10 +12,9 @@ export const ItemDetailContainer = () => {
 
     useEffect(() => {
         setLoading(true)
-
         pedirDatos()
             .then((res) => {
-                setItem( res.find((prod) => prod.id === Number(itemId)) )
+                setItem(res.find((prod) => prod.id === Number(itemId)))
             })
             .finally(() => {
                 setLoading(false)
