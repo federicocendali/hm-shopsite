@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { pedirDatos } from '../helpers/pedirDatos';
+import { Loader } from './Loader';
 import { ItemList } from './ItemList';
 
 export const ItemListContainer = () => {
@@ -15,7 +16,7 @@ export const ItemListContainer = () => {
         pedirDatos()
             .then((res) => {
                 if (categoryId) {
-                    setProductos( res.filter((prod) => prod.category === categoryId) )
+                    setProductos(res.filter((prod) => prod.category === categoryId))
                 } else {
                     setProductos(res)
                 }
@@ -32,7 +33,7 @@ export const ItemListContainer = () => {
         <div className="list-container">
             {
                 loading
-                    ? <h2>Cargando...</h2>
+                    ? <Loader />
                     : <ItemList items={productos}/>
             }
         </div>

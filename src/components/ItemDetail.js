@@ -25,17 +25,20 @@ export const ItemDetail = ({item}) => {
             <img src={item.img} alt={item.name}/>
             <p>{item.description}</p>
             <p><small>Categoría: {item.category}</small></p>
+            {item.stock <= 5 && <p><strong>Quedan sólo {item.stock} unidades</strong></p>}
             <p>Precio: ${item.price}</p>
 
             {
-                isInCart(item.id)
-                    ? <Link to="/cart" className='btn btn-primary'>Terminar mi compra</Link>
-                    : <ItemCount
-                        max={item.stock}
-                        cantidad={cantidad}
-                        setCantidad={setCantidad}
-                        agregar={handleAgregar}
-                    />
+                item.stock === 0
+                    ? <h5>No hay stock de este producto</h5>
+                    : isInCart(item.id)
+                        ? <Link to="/cart" className='btn btn-primary'>Terminar mi compra</Link>
+                        : <ItemCount
+                            max={item.stock}
+                            cantidad={cantidad}
+                            setCantidad={setCantidad}
+                            agregar={handleAgregar}
+                        />
             }
 
             <div>
