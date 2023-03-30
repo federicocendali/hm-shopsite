@@ -1,22 +1,26 @@
-.cart-widget {
+.cart-widget-container {
     display: flex;
     align-items: center;
     gap: 5px;
     cursor: pointer;
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.5s;
     text-decoration: none;
     color: white;
     font-size: 25px;
-
-    &-active {
-        visibility: visible;
-        opacity: 1;
-    }
+    transition: all 0.3s;
 
     &:hover {
         scale: 1.1;
         color: white;
+    }
+
+    .cart-widget-span {
+        visibility: hidden;
+        opacity: 0;
+        transition: all 1.5s;
+
+        &-active {
+            visibility: visible;
+            opacity: 1;
+        }
     }
 }
