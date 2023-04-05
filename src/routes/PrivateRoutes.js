@@ -3,6 +3,7 @@ import { Navbar } from '../components/Navbar';
 import { ItemListContainer } from '../components/ItemListContainer';
 import { ItemDetailContainer } from '../components/ItemDetailContainer';
 import { Cart } from '../components/Cart';
+import { Checkout } from '../components/Checkout';
 
 export const PrivateRoutes = () => {
     return (
@@ -13,6 +14,7 @@ export const PrivateRoutes = () => {
                 <Route path='/productos/:categoryId' element={ <ItemListContainer /> }/>
                 <Route path='/detail/:itemId' element={ <ItemDetailContainer /> }/>
                 <Route path='/cart' element={ <Cart /> }/>
+                <Route path='/checkout' element={ <Checkout /> }/>
                 <Route path='*' element={ <Navigate to={"/"}/> }/>
             </Routes>
         </>
