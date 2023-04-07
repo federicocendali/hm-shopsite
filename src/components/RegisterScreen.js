@@ -2,8 +2,8 @@ import { useContext, useState } from 'react';
 import { LoginContext } from '../context/LoginContext';
 import { Link } from 'react-router-dom';
 
-export const LoginScreen = () => {
-    const { login, googleLogin } = useContext(LoginContext)
+export const RegisterScreen = () => {
+    const { register } = useContext(LoginContext)
 
     const [values, setValues] = useState({
         email: '',
@@ -19,15 +19,14 @@ export const LoginScreen = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        login(values)
+        register(values)
     }
 
     return (
         <div className="login-container">
             <div className="login">
-                <h2>Iniciar sesión</h2>
+                <h2>Registro</h2>
                 <hr/>
-
                 <form onSubmit={handleSubmit}>
                     <input 
                         onChange={handleChange}
@@ -37,7 +36,6 @@ export const LoginScreen = () => {
                         className="form-control my-2"
                         placeholder='Email'
                     />
-
                     <input 
                         name="password"
                         value={values.password}
@@ -46,10 +44,8 @@ export const LoginScreen = () => {
                         className="form-control my-2"
                         placeholder='Contraseña'
                     />
-
-                    <button className='btn btn-primary' type='submit'>Ingresar</button>
-                    <Link className='btn btn-outline-primary' to={"/register"}>Registrarme</Link>
-                    <button className='btn btn-outline-primary' onClick={googleLogin}>Ingresar con Google</button>
+                    <button className='btn btn-primary' type='submit'>Registrarme</button>
+                    <Link className='btn btn-outline-primary' to={"/login"}>Ya estoy registrado</Link>
                 </form>
             </div>
         </div>
