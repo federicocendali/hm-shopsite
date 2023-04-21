@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# H&M Store E-commerce React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a sample e-commerce project made for educational purposes. The app allows users to login with a generic user account (email: a@b.com, password: 123456), create an account and store their data in Firebase Auth. The app also utilizes Firebase services to store product data and images separately to improve site performance. Users can generate purchase orders, which update the real-time product stock in the database. 
 
-## Available Scripts
+The project is deployed on Netlify and can be accessed here: https://hm-shopsite.netlify.app/
 
-In the project directory, you can run:
+## Technologies Used
 
-### `npm start`
+- React.js
+- Firebase (Firestore, Authentication, Storage)
+- React Router
+- React Bootstrap
+- Netlify
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- User authentication: users can create an account and log in using their email and password or Google account.
+- Product management: products are stored in Firebase's Firestore database, and images are stored in Firebase's Storage service for better performance.
+- Shopping cart: users can add products to their shopping cart and remove them as needed.
+- Product browsing and filtering
+- Product detail view
+- Purchase order creation
+- Real-time stock management: users can place orders, which updates the stock of each product in the database and stores the order details in Firestore.
+- Netlify deployment
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository: `git clone https://github.com/federicocendali/hm-shopsite.git`
+2. Install dependencies: `npm install`
+3. Create a Firebase project and add your Firebase configuration to a `.env` file in the root directory.
+4. Start the development server: `npm start`
 
-### `npm run build`
+## Contributing
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## License
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[MIT](https://choosealicense.com/licenses/mit/)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project was created by Federico Cendali. Feel free to contact me at federicocendali@gmail.com with any questions or feedback.

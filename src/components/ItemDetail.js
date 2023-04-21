@@ -22,17 +22,17 @@ export const ItemDetail = ({item}) => {
         <div>
             <h2>{item.name}</h2>
             <hr/>
-            <img src={item.img} alt={item.name}/>
+            <img src={item.img} alt={item.name} className='img-fluid'/>
             <p>{item.description}</p>
-            <p><small>Categoría: {item.category}</small></p>
-            {item.stock <= 5 && <p><strong>Quedan sólo {item.stock} unidades</strong></p>}
-            <p>Precio: ${item.price}</p>
+            <p><small>Category: {item.category}</small></p>
+            {item.stock <= 5 && <p><strong>Only {item.stock} units left</strong></p>}
+            <p>Price: ${item.price}</p>
 
             {
                 item.stock === 0
-                    ? <h5>No hay stock de este producto</h5>
+                    ? <h5>Out of stock</h5>
                     : isInCart(item.id)
-                        ? <Link to="/cart" className='btn btn-primary'>Terminar mi compra</Link>
+                        ? <Link to="/cart" className='btn btn-primary'>Complete my purchase</Link>
                         : <ItemCount
                             max={item.stock}
                             cantidad={cantidad}
@@ -42,7 +42,7 @@ export const ItemDetail = ({item}) => {
             }
 
             <div>
-                <Link to="/">Volver</Link>
+                <Link to="/">Return to Home</Link>
             </div>
         </div>
     )

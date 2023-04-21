@@ -24,15 +24,15 @@ export const Checkout = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         if (values.nombre.length < 3) {
-            alert("El nombre es muy corto")
+            alert("The name is too short")
             return
         }
         if (values.direccion.length < 5) {
-            alert("El direccion es muy corto")
+            alert("The address is too short")
             return
         }
         if (values.email.length < 7) {
-            alert("El email es muy corto")
+            alert("The email is too short")
             return
         }
 
@@ -71,16 +71,16 @@ export const Checkout = () => {
             setOrderId(id)
             vaciarCarrito()
         } else {
-            alert("Hay items sin stock: " + outOfStock.map(i => i.name).join(', '))
+            alert("There are items out of stock: " + outOfStock.map(i => i.name).join(', '))
         }
     }
 
     if (orderId) {
         return (
             <div className="container my-5">
-                <h2>Tu compra se registró exitosamente!</h2>
+                <h2>Your purchase has been successfully recorded!</h2>
                 <hr/>
-                <p>Tu número de orden es: <strong>{orderId}</strong></p>
+                <p>Your order ID is: <strong>{orderId}</strong></p>
             </div>
         )
     }
@@ -91,7 +91,7 @@ export const Checkout = () => {
 
     return (
         <div className="container my-5">
-            <h2>Ingresa tus datos</h2>
+            <h2>Enter your information</h2>
             <hr/>
 
             <form onSubmit={handleSubmit}>
@@ -99,7 +99,7 @@ export const Checkout = () => {
                     value={values.nombre}
                     type="text"
                     className="form-control my-2"
-                    placeholder="Tu nombre"
+                    placeholder="Your name"
                     onChange={handleInputChange}
                     name="nombre"
                 />
@@ -107,7 +107,7 @@ export const Checkout = () => {
                     value={values.direccion}
                     type="text"
                     className="form-control my-2"
-                    placeholder="Tu dirección"
+                    placeholder="Your address"
                     name="direccion"
                     onChange={handleInputChange}
                 />
@@ -115,12 +115,12 @@ export const Checkout = () => {
                     value={values.email}
                     type="email"
                     className="form-control my-2"
-                    placeholder="Tu email"
+                    placeholder="Your email"
                     name="email"
                     onChange={handleInputChange}
                 />
 
-                <button className="btn btn-primary" type="submit">Enviar</button>
+                <button className="btn btn-primary" type="submit">Submit</button>
             </form>
         </div>
     )

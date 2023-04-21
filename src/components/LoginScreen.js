@@ -25,7 +25,7 @@ export const LoginScreen = () => {
     return (
         <div className="login-container">
             <div className="login">
-                <h2>Iniciar sesión</h2>
+                <h2>Sign in to H&M Store</h2>
                 <hr/>
 
                 <form onSubmit={handleSubmit}>
@@ -44,12 +44,12 @@ export const LoginScreen = () => {
                         onChange={handleChange}
                         type={'password'}
                         className="form-control my-2"
-                        placeholder='Contraseña'
+                        placeholder='Password'
                     />
 
-                    <button className='btn btn-primary' type='submit'>Ingresar</button>
-                    <Link className='btn btn-outline-primary' to={"/register"}>Registrarme</Link>
-                    <button className='btn btn-outline-primary' onClick={googleLogin}>Ingresar con Google</button>
+                    <button className='btn btn-primary' type='submit'>Sign in</button>
+                    <Link className='btn btn-outline-primary' to={"/register"}>Sign up</Link>
+                    <button className='btn btn-outline-primary' onClick={googleLogin}>Sign in with Google</button>
                 </form>
             </div>
         </div>

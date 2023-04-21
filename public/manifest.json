@@ -1,6 +1,6 @@
 {
-  "short_name": "E-Commerce",
-  "name": "E-Commerce React App",
+  "short_name": "hm-shopsite",
+  "name": "H&M Store React App",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",

@@ -25,7 +25,7 @@ export const RegisterScreen = () => {
     return (
         <div className="login-container">
             <div className="login">
-                <h2>Registro</h2>
+                <h2>Sign up</h2>
                 <hr/>
                 <form onSubmit={handleSubmit}>
                     <input 
@@ -42,10 +42,10 @@ export const RegisterScreen = () => {
                         onChange={handleChange}
                         type={'password'}
                         className="form-control my-2"
-                        placeholder='Contraseña'
+                        placeholder='Password'
                     />
-                    <button className='btn btn-primary' type='submit'>Registrarme</button>
-                    <Link className='btn btn-outline-primary' to={"/login"}>Ya estoy registrado</Link>
+                    <button className='btn btn-primary' type='submit'>Sign up</button>
+                    <Link className='btn btn-outline-primary' to={"/login"}>Already registered</Link>
                 </form>
             </div>
         </div>

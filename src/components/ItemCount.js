@@ -14,7 +14,7 @@ export const ItemCount = ({max, cantidad, setCantidad, agregar}) => {
             <span className="mx-3">{cantidad}</span>
             <button onClick={handleSumar} className={`btn ${cantidad === max ? "btn-outline-danger" : "btn-primary"}`}>+</button>
             <br/>
-            <button onClick={agregar} className="btn btn-primary">Agregar al carrito</button>
+            <button onClick={agregar} className="btn btn-primary">Add to cart</button>
         </div>
     )
 }

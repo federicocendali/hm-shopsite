@@ -11,15 +11,15 @@ export const Navbar = () => {
                 <Link to='/'><img src="./assets/logo.png" className="header__logo" alt="LOGO"/></Link>
                 <nav className="navbar">
                     <NavLink to='/' className="navbar__link">Home</NavLink>
-                    <NavLink to='/productos/Hombre' className="navbar__link">Hombre</NavLink>
-                    <NavLink to='/productos/Mujer' className="navbar__link">Mujer</NavLink>
-                    <NavLink to='/productos/Niños' className="navbar__link">Niños</NavLink>
+                    <NavLink to='/productos/Hombre' className="navbar__link">Men</NavLink>
+                    <NavLink to='/productos/Mujer' className="navbar__link">Women</NavLink>
+                    <NavLink to='/productos/Niños' className="navbar__link">Kids</NavLink>
                 </nav>
                 <CartWidget />
             </div>
             <div className='user'>
-                <h6>Bienvenido: {user.email}</h6>
-                <button className='btn btn-outline-danger' onClick={logout}>Logout</button>
+                <h6>Signed in as {user.email}</h6>
+                <button className='btn btn-outline-danger' onClick={logout}>Sign out</button>
             </div>
         </header>
     )
