@@ -11,9 +11,9 @@ export const Navbar = () => {
                 <Link to='/'><img src="./assets/logo.png" className="header__logo" alt="LOGO"/></Link>
                 <nav className="navbar">
                     <NavLink to='/' className="navbar__link">Home</NavLink>
-                    <NavLink to='/productos/Hombre' className="navbar__link">Men</NavLink>
-                    <NavLink to='/productos/Mujer' className="navbar__link">Women</NavLink>
-                    <NavLink to='/productos/Niños' className="navbar__link">Kids</NavLink>
+                    <NavLink to='/products/Men' className="navbar__link">Men</NavLink>
+                    <NavLink to='/products/Women' className="navbar__link">Women</NavLink>
+                    <NavLink to='/products/Kids' className="navbar__link">Kids</NavLink>
                 </nav>
                 <CartWidget />
             </div>

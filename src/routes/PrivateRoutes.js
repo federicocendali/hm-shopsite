@@ -11,7 +11,7 @@ export const PrivateRoutes = () => {
             <Navbar />
             <Routes>
                 <Route path='/' element={ <ItemListContainer /> }/>
-                <Route path='/productos/:categoryId' element={ <ItemListContainer /> }/>
+                <Route path='/products/:categoryId' element={ <ItemListContainer /> }/>
                 <Route path='/detail/:itemId' element={ <ItemDetailContainer /> }/>
                 <Route path='/cart' element={ <Cart /> }/>
                 <Route path='/checkout' element={ <Checkout /> }/>
