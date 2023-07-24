@@ -1,8 +1,8 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles/index.scss';
-import { CartProvider } from './context/CartContext';
-import { LoginProvider } from './context/LoginContext';
-import { AppRouter } from './routes/AppRouter';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles/index.scss";
+import { CartProvider } from "./context/CartContext";
+import { LoginProvider } from "./context/LoginContext";
+import { AppRouter } from "./routes/AppRouter";
 
 function App() {
   return (

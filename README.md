@@ -1,6 +1,6 @@
 # H&M Store E-commerce React App
 
-This is a sample e-commerce project made for educational purposes. The app allows users to login with a generic user account (email: a@b.com, password: 123456), create an account and store their data in Firebase Auth. The app also utilizes Firebase services to store product data and images separately to improve site performance. Users can generate purchase orders, which update the real-time product stock in the database. 
+This is a sample e-commerce project made for educational purposes. The app allows users to login with a generic user account (email: a@b.com, password: 123456), create an account and store their data in Firebase Auth. The app also utilizes Firebase services to store product data and images separately to improve site performance. Users can generate purchase orders, which update the real-time product stock in the database.
 
 The project is deployed on Netlify and can be accessed here: https://hm-shopsite.netlify.app/
 
@@ -37,6 +37,5 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
 
 This project was created by Federico Cendali. Feel free to contact me at federicocendali@gmail.com with any questions or feedback.
